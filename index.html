@@ -1,0 +1,149 @@
+<!DOCTYPE hmtl>
+<html>
+    <head>
+    <title>Rock Paper Scissors for Java Practice</title>
+</head>
+
+<body>
+<script>
+    alert("Type ' game() '  in the console to start playing!")
+
+function computerPlay() {
+    let number = Math.floor(Math.random() * 3);
+    if (number === 0) {
+        return computerSelection = "Rock";
+
+    } else if (number === 1) {
+        return computerSelection = "Paper";
+
+    } else {
+        return computerSelection = "Scissors";
+    }
+} 
+
+function playRound(playerSelection, computerSelection) {
+    playerSelection = playerSelection.toUpperCase();
+    computerSelection = computerSelection.toUpperCase();
+
+    if (playerSelection === computerSelection) {
+        console.log("TIE")
+        let result = 0;
+        return result;
+    } else if (playerSelection === "ROCK" && computerSelection === "PAPER") {
+        console.log("Computer chose Paper xD")
+        let result = -1;
+        return result;
+
+    } else if (playerSelection === "ROCK" && computerSelection === "SCISSORS") {
+        console.log("Good job man! Computer chose Scissors")
+        let result = 1;
+        return result;
+    
+    } else if (playerSelection === "PAPER" && computerSelection === "ROCK") {
+        console.log("Lmao computer chose rock Good job!")
+        let result = 1;
+        return result;
+    
+    } else if (playerSelection === "PAPER" && computerSelection == "SCISSORS") {
+        console.log("XDDDDD Computer chose scissors, you got fucked")
+        let result = -1;
+        return result;
+    
+    } else if (playerSelection === "SCISSORS" && computerSelection === "ROCK") {
+        console.log("gj man, computer chose Rock XDDDDDDDDDD")
+        let result = -1;
+        return result;  
+    
+    } else if (playerSelection === "SCISSORS" && computerSelection === "PAPER") {
+        console.log("nice, computer chose Paper")
+        let result = 1;
+        return result;
+    }
+}
+
+    function game() {
+        
+        function round1() {
+            computerPlay();
+            let playerSelection = window.prompt("Play Rock Paper Scissors!");
+            let score = playRound(playerSelection, computerSelection);
+            return score;
+        }
+
+        let score = round1();
+        console.log(score);
+
+        function round2() {
+            computerPlay();
+            let playerSelection = window.prompt("Play Round 2!");
+            let score = playRound(playerSelection, computerSelection);
+            return score;
+        }
+
+        score = score + round2();
+        console.log(score);
+
+
+        function round3() {
+            computerPlay();
+            let playerSelection = window.prompt("Play Round 3!");
+            let score = playRound(playerSelection, computerSelection);
+            return score;
+        }
+            score = score + round3();
+            console.log(score);
+
+            if (score === 3) {
+                console.log("You won! good job!")
+            }
+                else if (score === -3) {
+                    console.log("You lose, noob")
+                }
+
+            else {
+        
+
+        function round4() {
+            computerPlay();
+            let playerSelection = window.prompt("Play Round 4!");
+            let score = playRound(playerSelection, computerSelection);
+            return score;
+
+        
+    }
+
+        score = score + round4();
+        console.log(score);
+
+        function round5() {
+            computerPlay();
+            let playerSelection = window.prompt("Play Round 5!");
+            let score = playRound(playerSelection, computerSelection);
+            return score;
+        }
+
+        score = score + round5();
+        
+        if (score > 0) {
+            console.log(score);
+            console.log("You won the game!")
+        } else if (score < 0) {
+            console.log(score);
+            console.log("You lost the game!")
+        } else {
+            console.log(score);
+            console.log("You tied the game!")
+        }
+            }
+
+            
+        
+       }
+
+
+
+
+</script>
+</body>
+
+</html>
